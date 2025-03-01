@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGERTON LAUNDRY SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Attendant Login Section -->
+        <div class="login-section">
+            <h2>Attendant Login</h2>
+            <form action="AttendantLoginServlet" method="POST" class="login-form">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Customer Order & Payment Section -->
+        <div class="order-section">
+            <h2>Customer Order & Payment</h2>
+            <form action="record_paymentServlet" method="POST" class="order-form">
+                <div class="input-group">
+                    <label for="customer_name">Customer Name:</label>
+                    <input type="text" id="customer_name" name="customer_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="order_details">Order Details:</label>
+                    <textarea id="order_details" name="order_details" rows="3" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="payment_amount">Payment Amount ($):</label>
+                    <input type="number" id="payment_amount" name="payment_amount" min="0" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="payment_method">Payment Method:</label>
+                    <select id="payment_method" name="payment_method" required>
+                        <option value="cash">Cash</option>
+                        <option value="card">Card</option>
+                        <option value="mobile">Mobile Payment</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Record Payment</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
